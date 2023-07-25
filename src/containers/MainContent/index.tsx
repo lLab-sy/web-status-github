@@ -1,12 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import FrequencyGraph from '../../components/frequency-graph';
 
 function MainContent() {
   return (
-    <Container>
-      <Row>
-        <Col sm={9}>sm=9</Col>
+    <Container style={{display: "block", height: "100vh"}}>
+      <Row style={{margin: "10px"}}>
+        <Col sm={9}><FrequencyGraph/></Col>
         <Col sm={3}>sm=3</Col>
       </Row>
       <Row>
