@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Col, Form, Row } from 'react-bootstrap';
+import { Col, Form, Row, Stack } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
@@ -9,20 +9,15 @@ function AllProject() {
 
     return (
         <>
-            <Row style={{width: '100%'}}>
-                <Col md="10">
-                    <Form.Control placeholder="Project name" />
-                </Col>
-                <Col md="auto">
-                    <Button
-                        onClick={() => setOpen(!open)}
-                        aria-controls="all-project-collapse-text"
-                        aria-expanded={open}
-                    >
-                        search
-                    </Button>
-                </Col>
-            </Row>
+            <Stack direction="horizontal" gap={3} style={{marginBottom: "10px"}}>
+                <Form.Control className="me-auto" placeholder="Enter project name" />
+                <Button variant="outline-primary"
+                    onClick={() => setOpen(!open)}
+                    aria-controls="all-project-collapse-text"
+                    aria-expanded={open}>
+                    Search
+                </Button>
+            </Stack>
             <div style={{ minHeight: '150px' }}>
                 <Collapse in={open} dimension="width">
                     <div id="all-project-collapse-text">

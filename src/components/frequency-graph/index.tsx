@@ -42,11 +42,10 @@ function FrequencyGraph() {
 
 
     return (
-        <Card>
+        <Card style={{ width: "75%" }}>
             <Card.Body>
                 <Card.Title>Frequency Graph</Card.Title>
                 <canvas ref={chartRef}></canvas>
-
             </Card.Body>
         </Card>
     );
